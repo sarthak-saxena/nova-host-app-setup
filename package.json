@@ -16,6 +16,14 @@
     "author": "Grant Bartlett",
     "license": "MIT",
     "dependencies": {
+        "@apollo/client": "^3.6.5",
+        "@fluentui/react-components": "9.0.0-rc.3",
+        "@fluentui/react-icons": "^1.1.118",
+        "@fluentui/react-tabster": "9.0.0-rc.3",
+        "@graphitation/graphql-js-tag": "^0.8.3",
+        "@nova/react": "^0.4.3",
+        "@nova/types": "^0.3.6",
+        "graphql": "^16.5.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },
@@ -31,6 +39,7 @@
         "postcss": "^8.2.14",
         "postcss-loader": "^5.2.0",
         "postcss-preset-env": "^7.2.3",
+        "progress-bar-webpack-plugin": "2.1.0",
         "sass": "^1.32.12",
         "sass-loader": "^11.0.1",
         "style-loader": "^2.0.0",

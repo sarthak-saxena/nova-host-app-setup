@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { outputConfig, copyPluginPatterns, entryConfig, devServer } = require("./env.config");
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = (env, options) => 
 {
@@ -72,6 +73,7 @@ module.exports = (env, options) =>
             publicPath: "",
         },
         plugins: [
+            new ProgressBarPlugin(),
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 inject: true,
