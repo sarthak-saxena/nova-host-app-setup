@@ -1,44 +1,51 @@
 import React, { Component } from "react";
 import { App } from "./App";
-import { Hello } from "./components/Hello";
+import { SchemaLink } from '@apollo/client/link/schema';
 import {
     ApolloClient,
     InMemoryCache,
     ApolloProvider,
     useQuery,
     gql
-  } from "@apollo/client";
-export interface MainProps
-{
+} from "@apollo/client";
+import { NovaIntegration } from "./components/NovaIntegration";
+import { makeExecutableSchema } from "graphql-tools";
+import { meetingResolvers } from "./resolvers/meetingResolvers";
+export interface MainProps {
     app: App;
 }
 
+const typeDefs = `
+  type Meeting {
+    subject: String
+  }
+  type Query {
+    meetings: [Meeting]
+  }
+`;
+
+const schema = makeExecutableSchema({
+    typeDefs,
+    resolvers: { ...meetingResolvers }
+});
+
+const client = new ApolloClient({
+    link: new SchemaLink({ schema }),
+    cache: new InMemoryCache()
+})
+
 export class Main extends Component<MainProps, {}>
 {
-    constructor(props: MainProps)
-    {
+    constructor(props: MainProps) {
         super(props);
     }
-    
 
-    public render(): JSX.Element
-    {
-        const client = new ApolloClient({
-            uri: 'https://48p1r2roz4.sse.codesandbox.io',
-            cache: new InMemoryCache()
-          });
+
+    public render(): JSX.Element {
         return (
-            <>
-                <ApolloProvider client={client}>
-                    <Hello message="React TypeScript Webpack Starter">
-                        <div className="features">
-                            <div>Webpack 5 + HMR</div>
-                            <div>TypeScript + React</div>
-                            <div>SCSS + Autoprefixing</div>
-                        </div>
-                    </Hello>
-                </ApolloProvider>,
-            </>
+            <ApolloProvider client={client}>
+                <NovaIntegration />
+            </ApolloProvider>
         );
     }
 }

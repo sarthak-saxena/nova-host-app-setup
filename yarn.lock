@@ -28,6 +28,24 @@
     tslib "^2.3.0"
     zen-observable-ts "^1.2.5"
 
+"@apollo/client@~3.2.5 || ~3.3.0 || ~3.4.0 || ~3.5.0 || ~3.6.0":
+  version "3.6.6"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@apollo/client/-/client-3.6.6.tgz#3fb1f5b11da9a64b51b5a86b62450bee034e7f41"
+  integrity sha1-P7H1sR2ppktRtahrYkUL7gNOf0E=
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.1.1"
+    "@wry/context" "^0.6.0"
+    "@wry/equality" "^0.5.0"
+    "@wry/trie" "^0.3.0"
+    graphql-tag "^2.12.6"
+    hoist-non-react-statics "^3.3.2"
+    optimism "^0.16.1"
+    prop-types "^15.7.2"
+    symbol-observable "^4.0.0"
+    ts-invariant "^0.10.3"
+    tslib "^2.3.0"
+    zen-observable-ts "^1.2.5"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.16.7":
   version "7.16.7"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@babel/code-frame/-/code-frame-7.16.7.tgz#44416b6bd7624b998f5b1af5d470856c40138789"
@@ -876,12 +894,44 @@
     "@fluentui/keyboard-keys" "9.0.0-rc.3"
     tslib "^2.1.0"
 
+"@graphitation/apollo-react-relay-duct-tape@^0.4.2":
+  version "0.4.5"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@graphitation/apollo-react-relay-duct-tape/-/apollo-react-relay-duct-tape-0.4.5.tgz#746a18e4ac6482e67127a224f7d2779dac86e7dc"
+  integrity sha1-dGoY5KxkguZxJ6Ik99J3nayG59w=
+  dependencies:
+    invariant "^2.2.4"
+
 "@graphitation/graphql-js-tag@^0.8.3":
   version "0.8.3"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@graphitation/graphql-js-tag/-/graphql-js-tag-0.8.3.tgz#56750c1966c0fea79955b7730ea36d7bfd25e94d"
   integrity sha1-VnUMGWbA/qeZVbdzDqNte/0l6U0=
   dependencies:
     invariant "^2.0.0"
+
+"@graphql-tools/merge@8.2.13":
+  version "8.2.13"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@graphql-tools/merge/-/merge-8.2.13.tgz#d4f254dcea301ce3d9c23b03eb68a7ae9baf6981"
+  integrity sha1-1PJU3OowHOPZwjsD62inrpuvaYE=
+  dependencies:
+    "@graphql-tools/utils" "8.6.12"
+    tslib "~2.4.0"
+
+"@graphql-tools/schema@8.3.13":
+  version "8.3.13"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@graphql-tools/schema/-/schema-8.3.13.tgz#099460459d7821dd8deb34952900fe300085ba0b"
+  integrity sha1-CZRgRZ14Id2N6zSVKQD+MACFugs=
+  dependencies:
+    "@graphql-tools/merge" "8.2.13"
+    "@graphql-tools/utils" "8.6.12"
+    tslib "~2.4.0"
+    value-or-promise "1.0.11"
+
+"@graphql-tools/utils@8.6.12":
+  version "8.6.12"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@graphql-tools/utils/-/utils-8.6.12.tgz#0a550dc0331fd9b097fe7223d65cbbee720556e4"
+  integrity sha1-ClUNwDMf2bCX/nIj1ly77nIFVuQ=
+  dependencies:
+    tslib "~2.4.0"
 
 "@graphql-typed-document-node/core@^3.1.1":
   version "3.1.1"
@@ -1000,13 +1050,6 @@
   version "0.4.0"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@nova/types/-/types-0.4.0.tgz#9025dd51a849df9e77f59190c52601e86fb5148a"
   integrity sha1-kCXdUahJ35539ZGQxSYB6G+1FIo=
-
-"@office-start/appbar-icons@^2.4.2":
-  version "2.4.3"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@office-start/appbar-icons/-/appbar-icons-2.4.3.tgz#2191241c3d09127d7115099b6a4ae280052407d2"
-  integrity sha1-IZEkHD0JEn1xFQmbakrigAUkB9I=
-  dependencies:
-    "@fluentui/react-icons" "^2.0.159-beta.10"
 
 "@popperjs/core@~2.4.3":
   version "2.4.4"
@@ -2547,6 +2590,16 @@ graphql-tag@^2.12.6:
   integrity sha1-1EGlacHSU37xDKPRYztIclMptfE=
   dependencies:
     tslib "^2.1.0"
+
+graphql-tools@^8.2.11:
+  version "8.2.11"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/graphql-tools/-/graphql-tools-8.2.11.tgz#cf4fcd8a91c2185888b355abdd4eb283917fc7cb"
+  integrity sha1-z0/NipHCGFiIs1Wr3U6yg5F/x8s=
+  dependencies:
+    "@graphql-tools/schema" "8.3.13"
+    tslib "~2.4.0"
+  optionalDependencies:
+    "@apollo/client" "~3.2.5 || ~3.3.0 || ~3.4.0 || ~3.5.0 || ~3.6.0"
 
 graphql@^15.5.0:
   version "15.8.0"
@@ -4422,7 +4475,7 @@ ts-loader@^9.1.2:
     micromatch "^4.0.0"
     semver "^7.3.4"
 
-tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.3.1:
+tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.3.1, tslib@~2.4.0:
   version "2.4.0"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha1-fOyqfwc85oCgWEeqd76UEJjzbcM=
@@ -4476,6 +4529,11 @@ uuid@^8.3.2:
   version "8.3.2"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha1-gNW1ztJxu5r2xEXyGhoExgbO++I=
+
+value-or-promise@1.0.11:
+  version "1.0.11"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/value-or-promise/-/value-or-promise-1.0.11.tgz#3e90299af31dd014fe843fe309cefa7c1d94b140"
+  integrity sha1-PpApmvMd0BT+hD/jCc76fB2UsUA=
 
 vary@~1.1.2:
   version "1.1.2"
