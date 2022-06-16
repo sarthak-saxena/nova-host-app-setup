@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { App } from "./App";
+import { App } from "./bootstrap";
 import { SchemaLink } from '@apollo/client/link/schema';
 import {
     ApolloClient,

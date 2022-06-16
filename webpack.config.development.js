@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { outputConfig, copyPluginPatterns, entryConfig, devServer } = require("./env.config");
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const SidecarWebpackPlugin = require('sidecar-webpack-plugin');
 
 module.exports = (env, options) => 
 {
@@ -74,6 +75,25 @@ module.exports = (env, options) =>
         },
         plugins: [
             new ProgressBarPlugin(),
+            // This enables module federation
+            new SidecarWebpackPlugin({
+                exposes: {
+                    '.': './src/index.ts',
+                },
+                shared: {
+                    react: {
+                        singleton: true,
+                        requiredVersion: '>=16.0.0',
+                    },
+                    '@nova/react': {
+                        requiredVersion: ">=1.0.5",
+                        singleton: true,
+                    },
+                    '@fluentui/react-shared-contexts': {
+                        singleton: true,
+                    },
+                },
+            }),
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 inject: true,
