@@ -824,6 +824,14 @@
     "@fluentui/react-theme" "9.0.0-rc.3"
     tslib "^2.1.0"
 
+"@fluentui/react-shared-contexts@^9.0.0-rc.3":
+  version "9.0.0-rc.10"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-shared-contexts/-/react-shared-contexts-9.0.0-rc.10.tgz#5646c48364298ba2db7d41d5c39c63aee432e3fb"
+  integrity sha1-VkbEg2Qpi6LbfUHVw5xjruQy4/s=
+  dependencies:
+    "@fluentui/react-theme" "9.0.0-rc.9"
+    tslib "^2.1.0"
+
 "@fluentui/react-slider@9.0.0-beta.8":
   version "9.0.0-beta.8"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-slider/-/react-slider-9.0.0-beta.8.tgz#160cf11cc34885d7b356b76c45c24aa68ae51afb"
@@ -870,6 +878,13 @@
   version "9.0.0-rc.3"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-theme/-/react-theme-9.0.0-rc.3.tgz#ca4c48df38c0ca021782da4c428daa207f11d0a0"
   integrity sha1-ykxI3zjAygIXgtpMQo2qIH8R0KA=
+  dependencies:
+    tslib "^2.1.0"
+
+"@fluentui/react-theme@9.0.0-rc.9":
+  version "9.0.0-rc.9"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-theme/-/react-theme-9.0.0-rc.9.tgz#037d5016f6469ed780bca027470463aa76f9dd7c"
+  integrity sha1-A31QFvZGnteAvKAnRwRjqnb53Xw=
   dependencies:
     tslib "^2.1.0"
 

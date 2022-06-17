@@ -90,6 +90,11 @@ module.exports = (env, options) =>
                         singleton: true,
                     },
                     '@fluentui/react-shared-contexts': {
+                        requiredVersion: ">=^9.0.0-rc.3",
+                        singleton: true,
+                    },
+                    '@fluentui/react-components': {
+                        requiredVersion: ">=^9.0.0-rc.3",
                         singleton: true,
                     },
                 },
